@@ -134,3 +134,60 @@
     background-color: #ffc20e;
     opacity: 0.9;
 }
+
+@media screen and (max-width: 900px) {
+    .banner-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-texto,
+    .banner-imagem {
+        width: 100%;
+    }
+
+    .banner-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-botoes {
+        justify-content: center;
+    }
+
+    .banner-imagem {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .banner {
+        min-height: auto;
+    }
+
+    .banner-conteudo {
+        padding: 45px 20px;
+    }
+
+    .banner-texto h1 {
+        font-size: 38px;
+    }
+
+    .banner-texto p {
+        font-size: 16px;
+    }
+
+    .banner-botoes {
+        flex-direction: column;
+    }
+
+    .botao {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-imagem img {
+        border-width: 6px;
+        border-radius: 18px;
+    }
+}

@@ -1,59 +1,201 @@
-.header {
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header-top {
-    max-width: 1300px;
-    height: 90px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1300px;
+  min-height: 110px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
-    width: 18%;
+  display: block;
+  width: 260px;
+  max-height: 90px;
+  object-fit: contain;
 }
 
-/* .menu::before {
-    content: "|";
-    margin: 0 10px;
-    color: #1E4FA3;
-} */
-
 .menu {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 35px;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #1E4FA3;
-    font-size: 17px;
-    font-weight: 600;
-    position: relative;
-    transition: .3s;
+  color: #1e4fa3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s;
 }
 
 .menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 3px;
-    background: #E31E2D;
-    transition: .3s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background-color: #e31e2d;
+  transition: width 0.3s;
 }
 
 .menu a:hover {
-    color: #E31E2D;
+  color: #e31e2d;
 }
 
 .menu a:hover::after {
+  width: 100%;
+}
+
+.botao-menu {
+  display: none;
+  border: none;
+  background-color: transparent;
+  color: #1e4fa3;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .header-container {
+    gap: 25px;
+  }
+
+  .logo {
+    width: 210px;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .menu a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-container {
+    min-height: 90px;
+    padding: 10px 25px;
+    position: relative;
+  }
+
+  .logo {
+    width: 200px;
+    max-height: 70px;
+  }
+
+  .botao-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    max-height: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background-color: #1e4fa3;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.4s,
+      opacity 0.3s,
+      visibility 0.3s;
+  }
+
+  .menu-aberto {
+    max-height: 600px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 17px 25px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .menu a::after {
+    display: none;
+  }
+
+  .menu a:hover {
+    color: #ffc20e;
+    background-color: #173d82;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header-container {
+    min-height: 78px;
+    padding: 8px 18px;
+  }
+
+  .logo {
+    width: 165px;
+    max-height: 62px;
+  }
+
+  .botao-menu {
+    font-size: 26px;
+  }
+
+  .menu a {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header-container {
+    padding: 8px 14px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .botao-menu {
+    font-size: 24px;
+  }
 }

@@ -80,3 +80,25 @@
     color: #ddd;
     font-size: 15px;
 }
+
+@media(max-width:1000px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:650px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col p {
+        justify-content: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+}
