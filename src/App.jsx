@@ -1,20 +1,14 @@
-import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom';
 
-import Header from './components/header/index'
-import Banner from './components/banner/index'
-import Footer from './components/footer'
+import AppRoutes from './routes';
 
 import './App.css'
 
 function App() {
   return (
-    <>
-      <Header />
-
-      <Banner />
-
-      <Footer />
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 
