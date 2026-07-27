@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import "./style.css";
 
@@ -37,13 +38,13 @@ export default function Header() {
         </button>
 
         <nav className={`menu ${menuAberto ? "menu-aberto" : ""}`}>
-          <a href="#" onClick={fecharMenu}>Início</a>
-          <a href="#produtos" onClick={fecharMenu}>Produtos</a>
-          <a href="#material-escolar" onClick={fecharMenu}>Material Escolar</a>
-          <a href="#escritorio" onClick={fecharMenu}>Escritório</a>
-          <a href="#presentes" onClick={fecharMenu}>Presentes</a>
-          <a href="#promocoes" onClick={fecharMenu}>Promoções</a>
-          <a href="#contato" onClick={fecharMenu}>Contato</a>
+          <Link to='/papelaria' onClick={fecharMenu}>Início</Link>
+          <Link to='/produtos' onClick={fecharMenu}>Produtos</Link>
+          <Link onClick={fecharMenu}>Material Escolar</Link>
+          <Link onClick={fecharMenu}>Escritório</Link>
+          <Link onClick={fecharMenu}>Presentes</Link>
+          <Link onClick={fecharMenu}>Promoções</Link>
+          <Link onClick={fecharMenu}>Contato</Link>
         </nav>
       </div>
     </header>

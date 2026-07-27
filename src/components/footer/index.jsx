@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
     FaInstagram,
@@ -24,17 +25,17 @@ export default function Footer() {
                 </div>
                 <div className="footer-col">
                     <h3>Institucional</h3>
-                    <a href="#">Início</a>
-                    <a href="#">Produtos</a>
-                    <a href="#">Promoções</a>
-                    <a href="#">Contato</a>
+                    <Link to='/papelaria'>Início</Link>
+                    <Link >Produtos</Link>
+                    <Link >Promoções</Link>
+                    <Link >Contato</Link>
                 </div>
                 <div className="footer-col">
                     <h3>Categorias</h3>
-                    <a href="#">Material Escolar</a>
-                    <a href="#">Escritório</a>
-                    <a href="#">Presentes</a>
-                    <a href="#">Artes</a>
+                    <Link >Material Escolar</Link>
+                    <Link >Escritório</Link>
+                    <Link >Presentes</Link>
+                    <Link >Artes</Link>
                 </div>
                 <div className="footer-col">
                     <h3>Contato</h3>
@@ -52,12 +53,12 @@ export default function Footer() {
                     </p>
 
                     <div className="redes">
-                        <a href="#">
+                        <Link href="#">
                             <FaInstagram />
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="#">
                             <FaWhatsapp />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
