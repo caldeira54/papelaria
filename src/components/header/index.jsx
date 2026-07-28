@@ -41,7 +41,7 @@ export default function Header() {
           <Link to='/papelaria' onClick={fecharMenu}>Início</Link>
           <Link to='/produtos' onClick={fecharMenu}>Produtos</Link>
           <Link to='/materiais' onClick={fecharMenu}>Material Escolar</Link>
-          <Link onClick={fecharMenu}>Escritório</Link>
+          <Link to='/escritorio' onClick={fecharMenu}>Escritório</Link>
           <Link onClick={fecharMenu}>Presentes</Link>
           <Link onClick={fecharMenu}>Promoções</Link>
           <Link onClick={fecharMenu}>Contato</Link>
