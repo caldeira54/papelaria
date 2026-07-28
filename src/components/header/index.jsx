@@ -40,7 +40,7 @@ export default function Header() {
         <nav className={`menu ${menuAberto ? "menu-aberto" : ""}`}>
           <Link to='/papelaria' onClick={fecharMenu}>Início</Link>
           <Link to='/produtos' onClick={fecharMenu}>Produtos</Link>
-          <Link onClick={fecharMenu}>Material Escolar</Link>
+          <Link to='/materiais' onClick={fecharMenu}>Material Escolar</Link>
           <Link onClick={fecharMenu}>Escritório</Link>
           <Link onClick={fecharMenu}>Presentes</Link>
           <Link onClick={fecharMenu}>Promoções</Link>

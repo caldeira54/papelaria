@@ -32,7 +32,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-col">
                     <h3>Categorias</h3>
-                    <Link >Material Escolar</Link>
+                    <Link to='/materiais'>Material Escolar</Link>
                     <Link >Escritório</Link>
                     <Link >Presentes</Link>
                     <Link >Artes</Link>
