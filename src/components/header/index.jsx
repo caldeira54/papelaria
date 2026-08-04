@@ -44,7 +44,7 @@ export default function Header() {
           <Link to='/escritorio' onClick={fecharMenu}>Escritório</Link>
           <Link onClick={fecharMenu}>Presentes</Link>
           <Link onClick={fecharMenu}>Promoções</Link>
-          <Link onClick={fecharMenu}>Contato</Link>
+          <Link to='/contato' onClick={fecharMenu}>Contato</Link>
         </nav>
       </div>
     </header>
